@@ -410,6 +410,14 @@ const renderPage = () => {
 
 // Functions
 const bookNow = () => {
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+  if (isLoggedIn !== "true") {
+    alert("বুকিং করতে হলে আপনাকে প্রথমে লগইন করতে হবে।");
+    window.location.href = "../logIn/login.html";
+    return;
+  }
+
   const url = `../booking button/booking-success.html?service=${encodeURIComponent(serviceData.title)}`;
   window.location.href = url;
 };
