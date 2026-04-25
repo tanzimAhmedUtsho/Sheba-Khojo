@@ -165,16 +165,7 @@ document.querySelectorAll(".service-option").forEach((item) => {
   item.addEventListener("click", () => {
     const serviceText = item.querySelector("p").innerText.trim();
 
-    // যদি ইউজার 'Cleaning' এ ক্লিক করে তবে সরাসরি ওই পেজে নিয়ে যাবে
-    if (serviceText.toLowerCase().includes("cleaning")) {
-      window.location.href = "../homeCleaning/cleaning.html";
-    }
-    // অন্য অপশনগুলোর জন্য সার্চ ফিল্ডে নাম বসিয়ে সার্চ করবে
-    else {
-      document.getElementById("searchInput").value = serviceText;
-      searchService();
-      // স্ক্রল করে সার্ভিস সেকশনে নিয়ে যাবে
-      document.querySelector(".grid").scrollIntoView({ behavior: "smooth" });
-    }
+    // All top categories now lead to the premium detail page
+    window.location.href = `../homeCleaning/cleaning.html?service=${encodeURIComponent(serviceText)}`;
   });
 });

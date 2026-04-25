@@ -1,45 +1,228 @@
-const serviceData = {
-  title: "Premium Home Cleaning",
-  rating: "4.9 (১২০+ রিভিউ)",
-  price: "৳ ৪৯৯ থেকে শুরু",
-  image:
-    "https://images.unsplash.com/photo-1581578731548-c64695cc6958?q=80&w=1000&auto=format&fit=crop",
-  description:
-    "আপনার ঘরকে করুন একদম নতুনের মতো ঝকঝকে। আমাদের দক্ষ কর্মীরা আধুনিক মেশিন এবং উন্নত কেমিক্যাল ব্যবহার করে গভীর পরিষ্কার নিশ্চিত করে।",
-  features: [
-    {
-      icon: "fa-broom",
-      title: "ডিপ ক্লিনিং",
-      desc: "প্রতিটি কোণা নিখুঁতভাবে পরিষ্কার করা হয়।",
-    },
-    {
-      icon: "fa-shield-virus",
-      title: "জীবাণুনাশ",
-      desc: "পরিষ্কারের পর ঘরকে করা হয় ১০০% জীবাণুমুক্ত।",
-    },
-    {
-      icon: "fa-user-check",
-      title: "দক্ষ কর্মী",
-      desc: "আমাদের সকল কর্মী ভেরিফাইড এবং অভিজ্ঞ।",
-    },
-  ],
-  includes: [
-    "মেঝে মোছা ও পলিশ",
-    "জানালার কাঁচ পরিষ্কার",
-    "রান্নাঘর ও বাথরুম ক্লিনিং",
-    "আসবাবপত্র ঝাড়া",
-  ],
+const allServices = {
+  "ac repair": {
+    title: "Premium AC Servicing & Repair",
+    rating: "4.8 (২৫০+ রিভিউ)",
+    price: "৳ ৭৯৯ থেকে শুরু",
+    image:
+      "https://images.unsplash.com/photo-1599939575322-792a426f461d?q=80&w=1000",
+    description:
+      "তীব্র গরমে আপনার এসি থাকুক একদম নতুনের মতো। আমাদের এক্সপার্ট টেকনিশিয়ানরা উন্নত টুলস ব্যবহার করে আপনার এসির কুলিং পারফরম্যান্স বাড়িয়ে দিবে।",
+    features: [
+      {
+        icon: "fa-snowflake",
+        title: "মাস্টার ক্লিন",
+        desc: "ইনডোর ও আউটডোর ইউনিটের গভীর পরিষ্কার।",
+      },
+      {
+        icon: "fa-gas-pump",
+        title: "গ্যাস রিফিল",
+        desc: "প্রয়োজনীয় প্রেসার অনুযায়ী গ্যাস টপ-আপ।",
+      },
+      {
+        icon: "fa-tools",
+        title: "৭ দিনের ওয়ারেন্টি",
+        desc: "সার্ভিস পরবর্তী যেকোনো সমস্যায় ফ্রি সাপোর্ট।",
+      },
+    ],
+    includes: [
+      "ফিল্টার পরিষ্কার",
+      "ইভাপোরেটর কয়েল ক্লিনিং",
+      "ড্রেন লাইন চেক",
+      "ইলেক্ট্রিক্যাল কানেকশন টেস্টিং",
+    ],
+  },
+  appliance: {
+    title: "Expert Appliance Repair",
+    rating: "4.7 (১৮০+ রিভিউ)",
+    price: "৳ ৫৫০ থেকে শুরু",
+    image:
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf45?q=80&w=1000",
+    description:
+      "টিভি, ফ্রিজ বা ওভেন - যেকোনো ইলেকট্রনিক ডিভাইসের নির্ভরযোগ্য সমাধান। অরিজিনাল পার্টস এবং দক্ষ ইঞ্জিনিয়ার নিশ্চিত করে দীর্ঘস্থায়ী সার্ভিস।",
+    features: [
+      {
+        icon: "fa-plug",
+        title: "দ্রুত মেরামত",
+        desc: "একই দিনে হোম ভিজিট ও সমাধান।",
+      },
+      {
+        icon: "fa-microchip",
+        title: "অরিজিনাল পার্টস",
+        desc: "সর্বদা জেনুইন স্পেয়ার পার্টস ব্যবহার।",
+      },
+      {
+        icon: "fa-check-double",
+        title: "ফুল ডায়াগনোসিস",
+        desc: "ভবিষ্যৎ সমস্যা এড়াতে পূর্ণাঙ্গ পরীক্ষা।",
+      },
+    ],
+    includes: [
+      "সার্কিট বোর্ড রিপেয়ার",
+      "মোটর টিউনিং",
+      "গ্যাস রিফিল (ফ্রিজ)",
+      "ইলেক্ট্রিক্যাল সেফটি চেক",
+    ],
+  },
+  cleaning: {
+    title: "Premium Home Cleaning",
+    rating: "4.9 (১২০+ রিভিউ)",
+    price: "৳ ৪৯৯ থেকে শুরু",
+    image:
+      "https://images.unsplash.com/photo-1581578731548-c64695cc6958?q=80&w=1000",
+    description:
+      "আপনার ঘরকে করুন একদম নতুনের মতো ঝকঝকে। আমাদের দক্ষ কর্মীরা আধুনিক মেশিন এবং উন্নত কেমিক্যাল ব্যবহার করে গভীর পরিষ্কার নিশ্চিত করে।",
+    features: [
+      {
+        icon: "fa-broom",
+        title: "ডিপ ক্লিনিং",
+        desc: "প্রতিটি কোণা নিখুঁতভাবে পরিষ্কার করা হয়।",
+      },
+      {
+        icon: "fa-shield-virus",
+        title: "জীবাণুনাশ",
+        desc: "পরিষ্কারের পর ঘরকে করা হয় ১০০% জীবাণুমুক্ত।",
+      },
+      {
+        icon: "fa-user-check",
+        title: "দক্ষ কর্মী",
+        desc: "আমাদের সকল কর্মী ভেরিফাইড এবং অভিজ্ঞ।",
+      },
+    ],
+    includes: [
+      "মেঝে মোছা ও পলিশ",
+      "জানালার কাঁচ পরিষ্কার",
+      "রান্নাঘর ও বাথরুম ক্লিনিং",
+      "আসবাবপত্র ঝাড়া",
+    ],
+  },
+  beauty: {
+    title: "Premium Home Salon & Beauty",
+    rating: "4.9 (৩০০+ রিভিউ)",
+    price: "৳ ৯৯৯ থেকে শুরু",
+    image:
+      "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?q=80&w=1000",
+    description:
+      "পার্লারের ভিড় এড়িয়ে ঘরে বসেই নিন প্রিমিয়াম বিউটি সার্ভিস। আমাদের সার্টিফাইড বিউটিশিয়ানরা ব্যবহার করেন হাই-এন্ড ব্র্যান্ডের কসমেটিকস।",
+    features: [
+      {
+        icon: "fa-magic",
+        title: "ব্র্যান্ডেড প্রোডাক্ট",
+        desc: "ত্বকের যত্নে সেরা মানের পন্য।",
+      },
+      {
+        icon: "fa-heart",
+        title: "হাইজেনিক সার্ভিস",
+        desc: "সম্পূর্ণ ডিসপোজেবল কিট ব্যবহার।",
+      },
+      {
+        icon: "fa-clock",
+        title: "সময় বাঁচান",
+        desc: "আপনার পছন্দমতো সময়ে ঘরেই সার্ভিস।",
+      },
+    ],
+    includes: [
+      "ফেসিয়াল ও স্ক্রাবিং",
+      "মেনিকিউর ও পেডিকিউর",
+      "হেয়ার কাট ও স্টাইলিং",
+      "ব্রাইডাল ও পার্টি মেকআপ",
+    ],
+  },
+  shifting: {
+    title: "Secure Home & Office Shifting",
+    rating: "4.6 (৯০+ রিভিউ)",
+    price: "৳ ৪০০০ থেকে শুরু",
+    image:
+      "https://images.unsplash.com/photo-1600518464441-9154a4dea21b?q=80&w=1000",
+    description:
+      "আপনার মূল্যবান মালামাল নিরাপদে স্থানান্তর করার দায়িত্ব আমাদের। বাবল র‍্যাপ এবং উন্নত প্যাকিংয়ের মাধ্যমে আমরা নিশ্চিত করি জিরো-ড্যামেজ শিপিং।",
+    features: [
+      {
+        icon: "fa-box-open",
+        title: "নিরাপদ প্যাকিং",
+        desc: "মাল্টি-লেয়ার প্রটেকশন প্যাকিং।",
+      },
+      {
+        icon: "fa-truck-loading",
+        title: "দক্ষ লোডার",
+        desc: "ভারী আসবাবপত্র বহনে দক্ষ টিম।",
+      },
+      {
+        icon: "fa-shield-alt",
+        title: "বীমা সুবিধা",
+        desc: "ক্ষয়ক্ষতির ক্ষেত্রে ক্ষতিপূরণ ব্যবস্থা।",
+      },
+    ],
+    includes: [
+      "প্যাকিং ও আনপ্যাকিং",
+      "আসবাবপত্র ফিটিং",
+      "লোডিং ও আনলোডিং",
+      "ট্রাক ও পরিবহন ব্যবস্থা",
+    ],
+  },
+  health: {
+    title: "Premium Health & Nursing Support",
+    rating: "4.9 (১৫০+ রিভিউ)",
+    price: "৳ ৮০০ থেকে শুরু",
+    image:
+      "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1000",
+    description:
+      "শারীরিক অসুস্থতায় বিশেষজ্ঞ ডাক্তার এবং নার্সিং সাপোর্ট এখন আপনার ঘরেই। আমরা দিই ২৪/৭ জরুরি স্বাস্থ্যসেবা এবং কেয়ারগিভার সুবিধা।",
+    features: [
+      {
+        icon: "fa-user-nurse",
+        title: "সার্টিফাইড নার্স",
+        desc: "অভিজ্ঞ ও মানবিক কেয়ারগিভার।",
+      },
+      {
+        icon: "fa-stethoscope",
+        title: "ডাক্তার ভিজিট",
+        desc: "অন-কল ডাক্তার কনসালটেন্সি।",
+      },
+      {
+        icon: "fa-vial",
+        title: "হোম ল্যাব টেস্ট",
+        desc: "বাসায় রক্ত পরীক্ষা ও রিপোর্ট প্রদান।",
+      },
+    ],
+    includes: [
+      "ব্লাড প্রেসার ও সুগার চেক",
+      "ফিজিওথেরাপি",
+      "পোস্ট-অপারেটিভ কেয়ার",
+      "মেডিসিন হোম ডেলিভারি",
+    ],
+  },
 };
+
+// বর্তমান সার্ভিসের ডাটা লোড করা
+let currentService = "cleaning"; // Default
+const params = new URLSearchParams(window.location.search);
+const serviceParam = params.get("service")?.toLowerCase() || "";
+
+// ম্যাপিং চেক করা
+if (serviceParam.includes("ac")) currentService = "ac repair";
+else if (serviceParam.includes("appliance")) currentService = "appliance";
+else if (serviceParam.includes("cleaning")) currentService = "cleaning";
+else if (serviceParam.includes("beauty")) currentService = "beauty";
+else if (serviceParam.includes("shifting")) currentService = "shifting";
+else if (serviceParam.includes("health")) currentService = "health";
+
+const serviceData = allServices[currentService];
 
 const renderPage = () => {
   const root = document.getElementById("service-detail");
+  if (!serviceData) {
+    root.innerHTML = "<p class='text-center py-20'>Service not found!</p>";
+    return;
+  }
+
   root.innerHTML = `
-        <main class="max-w-6xl mx-auto p-6 md:py-12">
+        <main class="max-w-6xl mx-auto p-6 md:py-12 animate-in fade-in duration-700">
             <div class="grid md:grid-cols-2 gap-12 items-start">
-                
+
                 <div class="relative group">
                     <img src="${serviceData.image}" class="rounded-3xl shadow-2xl w-full object-cover h-[400px] group-hover:scale-[1.02] transition duration-500" alt="Cleaning">
-                    <div class="absolute top-4 left-4 bg-white/90 dark:bg-slate-800 px-4 py-2 rounded-full font-bold text-pink-600 shadow-lg">
+                    <div class="absolute top-4 left-4 bg-white/90 dark:bg-slate-800 px-4 py-2 rounded-full font-bold text-pink-600 shadow-lg flex items-center gap-2">
+                        <span class="animate-pulse w-2 h-2 bg-pink-500 rounded-full"></span>
                         ⭐ ${serviceData.rating}
                     </div>
                 </div>
