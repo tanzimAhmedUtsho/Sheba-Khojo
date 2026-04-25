@@ -23,14 +23,40 @@ function toggleDark() {
 
 // ✅ ২. পেজ লোড হওয়ার সময় থিম চেক করা
 document.addEventListener("DOMContentLoaded", () => {
+  // থিম চেক
   const savedTheme = localStorage.getItem("theme");
   const themeBtn = document.getElementById("theme-toggle");
-
   if (savedTheme === "dark") {
     document.documentElement.classList.add("dark");
     if (themeBtn) themeBtn.innerHTML = "☀️";
   }
+
+  // লগইন চেক
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const loginBtnContainer = document.querySelector("nav div.space-x-3");
+
+  if (isLoggedIn === "true" && loginBtnContainer) {
+    const userName = localStorage.getItem("userName");
+    // লগইন বাটন সরিয়ে ইউজার প্রোফাইল ও লগআউট বাটন যোগ করা
+    const loginLink = loginBtnContainer.querySelector(
+      'a[href="/logIn/login.html"]',
+    );
+    if (loginLink) {
+      loginLink.innerHTML = `
+        <div class="flex items-center gap-3">
+          <span class="text-sm font-bold text-gray-600 dark:text-pink-400">👋 ${userName}</span>
+          <button onclick="logout()" class="bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-white px-4 py-2 rounded-full text-sm hover:bg-red-100 dark:hover:bg-red-900/30 transition">Logout</button>
+        </div>
+      `;
+    }
+  }
 });
+
+function logout() {
+  localStorage.removeItem("isLoggedIn");
+  localStorage.removeItem("userName");
+  window.location.reload();
+}
 
 // ✅ ৩. মডাল কন্ট্রোল (Quick Book Logic)
 function openModal(service) {
@@ -58,6 +84,14 @@ function closeModal() {
 
 // ✅ ৩.৫ বুকিং কনফার্ম করা
 function confirmBooking() {
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+  if (isLoggedIn !== "true") {
+    alert("বুকিং করতে হলে আপনাকে প্রথমে লগইন করতে হবে।");
+    window.location.href = "../logIn/login.html";
+    return;
+  }
+
   const name = document.getElementById("userName").value.trim();
   const phone = document.getElementById("userPhone").value.trim();
   const service = document.getElementById("serviceName").innerText;

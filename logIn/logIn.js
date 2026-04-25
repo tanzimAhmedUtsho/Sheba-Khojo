@@ -87,8 +87,12 @@ app.addEventListener("submit", (e) => {
 
     // Validation & Action
     if (email && password) {
-      console.log("Logging in with:", email);
-      alert("Sheba Khojo-তে স্বাগতম!");
+      // ইউজারের নাম হিসেবে ইমেইলের প্রথম অংশ নিচ্ছি (উদাহরণস্বরূপ)
+      const userName = email.split("@")[0];
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("userName", userName);
+
+      window.location.href = "../home/home.html";
     }
   }
 });
