@@ -44,9 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (isLoggedIn === "true" && loginBtnContainer) {
     const userName = localStorage.getItem("userName");
     // লগইন বাটন সরিয়ে ইউজার প্রোফাইল ও লগআউট বাটন যোগ করা
-    const loginLink = loginBtnContainer.querySelector(
-      'a[href="/logIn/login.html"]',
-    );
+    const loginLink = loginBtnContainer.querySelector('a[href$="login.html"]');
     if (loginLink) {
       loginLink.innerHTML = `
         <div class="flex items-center gap-3">
@@ -169,7 +167,7 @@ document.querySelectorAll(".service-option").forEach((item) => {
 
     // যদি ইউজার 'Cleaning' এ ক্লিক করে তবে সরাসরি ওই পেজে নিয়ে যাবে
     if (serviceText.toLowerCase().includes("cleaning")) {
-      window.location.href = "cleaning.html";
+      window.location.href = "../homeCleaning/cleaning.html";
     }
     // অন্য অপশনগুলোর জন্য সার্চ ফিল্ডে নাম বসিয়ে সার্চ করবে
     else {
