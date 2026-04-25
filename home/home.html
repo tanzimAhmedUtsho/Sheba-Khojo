@@ -4,17 +4,28 @@
     <meta charset="UTF-8" />
     <title>Sheba Khojo</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
   </head>
 
-  <body id="body" class="bg-pink-50 text-gray-800 transition duration-300">
-    <!-- NAVBAR -->
+  <body
+    id="body"
+    class="bg-pink-50 dark:bg-slate-900 text-gray-800 dark:text-gray-100 transition-colors duration-300"
+  >
     <nav
-      class="fixed w-full bg-white/80 backdrop-blur-md shadow z-50 flex justify-between items-center px-8 py-4"
+      class="fixed w-full bg-white/80 dark:bg-slate-800/80 backdrop-blur-md shadow z-50 flex justify-between items-center px-8 py-4"
     >
       <h1 class="text-xl font-bold text-pink-500">Sheba Khojo</h1>
 
-      <div class="space-x-3">
-        <button onclick="toggleDark()" class="px-3 py-1 bg-pink-100 rounded">
+      <div class="space-x-3 flex items-center">
+        <button
+          id="theme-toggle"
+          onclick="toggleDark()"
+          class="px-3 py-1 bg-pink-100 dark:bg-slate-700 rounded-lg hover:bg-pink-200 transition"
+        >
           🌙
         </button>
         <a href="/logIn/login.html">
@@ -27,7 +38,6 @@
       </div>
     </nav>
 
-    <!-- HERO -->
     <section
       class="h-[500px] flex items-center justify-center text-center text-white relative"
       style="
@@ -37,25 +47,22 @@
       "
     >
       <div class="absolute inset-0 bg-black/50"></div>
-
       <div class="relative z-10">
         <h2 class="text-5xl font-bold mb-4">Your Personal Assistant</h2>
         <p class="mb-6 text-lg">One-stop solution for your services</p>
 
-        <!-- SEARCH -->
         <div
-          class="flex bg-white rounded-xl overflow-hidden shadow-lg w-[600px] mx-auto"
+          class="flex bg-white dark:bg-slate-700 rounded-xl overflow-hidden shadow-lg w-[300px] md:w-[600px] mx-auto"
         >
-          <div class="px-4 flex items-center text-gray-600">📍 Gulshan</div>
-
+          <div class="px-4 flex items-center text-gray-600 dark:text-gray-300">
+            📍 Gulshan
+          </div>
           <input
             id="searchInput"
             type="text"
             placeholder="Find your service..."
-            class="flex-1 px-4 py-3 text-black outline-none"
+            class="flex-1 px-4 py-3 text-black dark:text-white dark:bg-slate-700 outline-none"
           />
-
-          <!-- ✅ ADD onclick -->
           <button onclick="searchService()" class="bg-pink-500 px-6 text-white">
             🔍
           </button>
@@ -63,69 +70,61 @@
       </div>
     </section>
 
-    <!-- SERVICE OPTIONS -->
     <div class="relative -mt-16 px-10">
       <div
-        class="bg-white rounded-2xl shadow-lg p-6 flex justify-between items-center overflow-x-auto"
+        class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 flex justify-between items-center overflow-x-auto gap-4"
       >
-        <!-- add class service-option -->
         <div
-          class="service-option text-center min-w-[120px] hover:scale-105 transition cursor-pointer"
+          class="service-option text-center min-w-[100px] hover:scale-105 transition cursor-pointer"
         >
           <div class="text-2xl mb-2">❄️</div>
-          <p>AC Repair</p>
+          <p class="dark:text-white">AC Repair</p>
         </div>
-
         <div
-          class="service-option text-center min-w-[120px] hover:scale-105 transition cursor-pointer"
+          class="service-option text-center min-w-[100px] hover:scale-105 transition cursor-pointer"
         >
           <div class="text-2xl mb-2">🔧</div>
-          <p>Appliance</p>
+          <p class="dark:text-white">Appliance</p>
         </div>
-
         <div
-          class="service-option text-center min-w-[120px] hover:scale-105 transition cursor-pointer"
+          class="service-option text-center min-w-[100px] hover:scale-105 transition cursor-pointer"
         >
           <div class="text-2xl mb-2">🧹</div>
-          <p>Cleaning</p>
+          <p class="dark:text-white">Cleaning</p>
         </div>
-
         <div
-          class="service-option text-center min-w-[120px] hover:scale-105 transition cursor-pointer"
+          class="service-option text-center min-w-[100px] hover:scale-105 transition cursor-pointer"
         >
           <div class="text-2xl mb-2">💅</div>
-          <p>Beauty</p>
+          <p class="dark:text-white">Beauty</p>
         </div>
-
         <div
-          class="service-option text-center min-w-[120px] hover:scale-105 transition cursor-pointer"
+          class="service-option text-center min-w-[100px] hover:scale-105 transition cursor-pointer"
         >
           <div class="text-2xl mb-2">🚚</div>
-          <p>Shifting</p>
+          <p class="dark:text-white">Shifting</p>
         </div>
-
         <div
-          class="service-option text-center min-w-[120px] hover:scale-105 transition cursor-pointer"
+          class="service-option text-center min-w-[100px] hover:scale-105 transition cursor-pointer"
         >
           <div class="text-2xl mb-2">❤️</div>
-          <p>Health</p>
+          <p class="dark:text-white">Health</p>
         </div>
       </div>
     </div>
 
-    <!-- SERVICES -->
-    <section class="bg-pink-100/50 p-10 mt-10">
+    <section class="bg-pink-100/50 dark:bg-slate-900/50 p-10 mt-10">
       <h2 class="text-2xl font-bold text-center mb-8 text-pink-500">
         Popular Services
       </h2>
-
       <div class="grid md:grid-cols-3 gap-6">
-        <!-- ✅ add service-card class -->
         <div
-          class="service-card bg-white p-6 rounded-2xl shadow hover:shadow-xl transition"
+          class="service-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow hover:shadow-xl transition"
         >
-          <h3 class="text-xl font-bold">Home Cleaning</h3>
-          <p>Professional cleaning service</p>
+          <h3 class="text-xl font-bold dark:text-white">Home Cleaning</h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            Professional cleaning service
+          </p>
           <button
             onclick="openModal('Home Cleaning')"
             class="mt-3 bg-pink-500 text-white px-4 py-2 rounded-full"
@@ -133,72 +132,13 @@
             Book
           </button>
         </div>
-
-        <div
-          class="service-card bg-white p-6 rounded-2xl shadow hover:shadow-xl transition"
-        >
-          <h3 class="text-xl font-bold">AC Servicing</h3>
-          <p>Fast AC repair</p>
-          <button
-            onclick="openModal('AC Servicing')"
-            class="mt-3 bg-pink-500 text-white px-4 py-2 rounded-full"
-          >
-            Book
-          </button>
-        </div>
-
-        <div
-          class="service-card bg-white p-6 rounded-2xl shadow hover:shadow-xl transition"
-        >
-          <h3 class="text-xl font-bold">Electric Fix</h3>
-          <p>Electrical solutions</p>
-          <button
-            onclick="openModal('Electric Fix')"
-            class="mt-3 bg-pink-500 text-white px-4 py-2 rounded-full"
-          >
-            Book
-          </button>
-        </div>
       </div>
     </section>
 
-    <!-- MODAL -->
-    <div
-      id="modal"
-      class="hidden fixed inset-0 bg-black/40 flex justify-center items-center"
-    >
-      <div class="bg-white p-6 rounded-2xl w-96 shadow-lg">
-        <h2 id="serviceName" class="text-xl font-bold mb-4"></h2>
-
-        <input
-          type="text"
-          placeholder="Your Name"
-          class="w-full mb-2 px-3 py-2 border rounded"
-        />
-        <input
-          type="text"
-          placeholder="Phone"
-          class="w-full mb-2 px-3 py-2 border rounded"
-        />
-
-        <button class="bg-pink-500 text-white px-4 py-2 rounded-full w-full">
-          Confirm Booking
-        </button>
-        <button onclick="closeModal()" class="mt-2 text-red-400">Close</button>
-      </div>
-    </div>
-
-    <!-- ABOUT -->
-    <section class="p-10 text-center bg-white">
-      <h2 class="text-2xl font-bold mb-4 text-pink-500">About</h2>
-      <p>Owned by Tanzim Ahmed Utsho<br />Serving since 2018</p>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-pink-500 text-white text-center p-4">
+    <footer class="bg-pink-500 dark:bg-pink-700 text-white text-center p-4">
       © 2026 Tanzim Ahmed Utsho Sheba Khojo
     </footer>
 
-    <script src="script.js"></script>
+    <script src="home.js"></script>
   </body>
 </html>
