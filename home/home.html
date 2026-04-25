@@ -2,13 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Sheba Khojo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sheba Khojo - Your Personal Assistant</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         darkMode: "class",
       };
     </script>
+    <style>
+      /* Smooth scrolling for better UX */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
 
   <body
@@ -47,14 +54,18 @@
       "
     >
       <div class="absolute inset-0 bg-black/50"></div>
-      <div class="relative z-10">
-        <h2 class="text-5xl font-bold mb-4">Your Personal Assistant</h2>
+      <div class="relative z-10 px-4">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          Your Personal Assistant
+        </h2>
         <p class="mb-6 text-lg">One-stop solution for your services</p>
 
         <div
-          class="flex bg-white dark:bg-slate-700 rounded-xl overflow-hidden shadow-lg w-[300px] md:w-[600px] mx-auto"
+          class="flex bg-white dark:bg-slate-700 rounded-xl overflow-hidden shadow-lg w-full max-w-[600px] mx-auto"
         >
-          <div class="px-4 flex items-center text-gray-600 dark:text-gray-300">
+          <div
+            class="hidden sm:flex px-4 items-center text-gray-600 dark:text-gray-300 border-r dark:border-slate-600"
+          >
             📍 Gulshan
           </div>
           <input
@@ -63,155 +74,286 @@
             placeholder="Find your service..."
             class="flex-1 px-4 py-3 text-black dark:text-white dark:bg-slate-700 outline-none"
           />
-          <button onclick="searchService()" class="bg-pink-500 px-6 text-white">
+          <button
+            onclick="searchService()"
+            class="bg-pink-500 px-6 text-white hover:bg-pink-600 transition"
+          >
             🔍
           </button>
         </div>
       </div>
     </section>
 
-    <div class="relative -mt-16 px-10">
+    <div class="relative -mt-16 px-6 md:px-10">
       <div
-        class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 flex justify-between items-center overflow-x-auto gap-4"
+        class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 flex justify-between items-center overflow-x-auto gap-8"
       >
         <div
-          class="service-option text-center min-w-[100px] hover:scale-105 transition cursor-pointer"
+          class="service-option text-center min-w-[80px] hover:scale-110 transition cursor-pointer"
         >
-          <div class="text-2xl mb-2">❄️</div>
-          <p class="dark:text-white">AC Repair</p>
+          <div class="text-3xl mb-2">❄️</div>
+          <p class="text-sm font-medium dark:text-white">AC Repair</p>
         </div>
         <div
-          class="service-option text-center min-w-[100px] hover:scale-105 transition cursor-pointer"
+          class="service-option text-center min-w-[80px] hover:scale-110 transition cursor-pointer"
         >
-          <div class="text-2xl mb-2">🔧</div>
-          <p class="dark:text-white">Appliance</p>
+          <div class="text-3xl mb-2">🔧</div>
+          <p class="text-sm font-medium dark:text-white">Appliance</p>
         </div>
         <div
-          class="service-option text-center min-w-[100px] hover:scale-105 transition cursor-pointer"
+          class="service-option text-center min-w-[80px] hover:scale-110 transition cursor-pointer"
         >
-          <div class="text-2xl mb-2">🧹</div>
-          <p class="dark:text-white">Cleaning</p>
+          <div class="text-3xl mb-2">🧹</div>
+          <p class="text-sm font-medium dark:text-white">Cleaning</p>
         </div>
         <div
-          class="service-option text-center min-w-[100px] hover:scale-105 transition cursor-pointer"
+          class="service-option text-center min-w-[80px] hover:scale-110 transition cursor-pointer"
         >
-          <div class="text-2xl mb-2">💅</div>
-          <p class="dark:text-white">Beauty</p>
+          <div class="text-3xl mb-2">💅</div>
+          <p class="text-sm font-medium dark:text-white">Beauty</p>
         </div>
         <div
-          class="service-option text-center min-w-[100px] hover:scale-105 transition cursor-pointer"
+          class="service-option text-center min-w-[80px] hover:scale-110 transition cursor-pointer"
         >
-          <div class="text-2xl mb-2">🚚</div>
-          <p class="dark:text-white">Shifting</p>
+          <div class="text-3xl mb-2">🚚</div>
+          <p class="text-sm font-medium dark:text-white">Shifting</p>
         </div>
         <div
-          class="service-option text-center min-w-[100px] hover:scale-105 transition cursor-pointer"
+          class="service-option text-center min-w-[80px] hover:scale-110 transition cursor-pointer"
         >
-          <div class="text-2xl mb-2">❤️</div>
-          <p class="dark:text-white">Health</p>
+          <div class="text-3xl mb-2">❤️</div>
+          <p class="text-sm font-medium dark:text-white">Health</p>
         </div>
       </div>
     </div>
 
-    <section class="bg-pink-100/50 dark:bg-slate-900/50 p-10 mt-10">
-      <h2 class="text-2xl font-bold text-center mb-8 text-pink-500">
+    <section class="bg-pink-100/50 dark:bg-slate-900/50 p-6 md:p-10 mt-10">
+      <h2 class="text-3xl font-bold text-center mb-10 text-pink-500">
         Popular Services
       </h2>
-      <div class="grid md:grid-cols-3 gap-6">
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+      >
         <div
-          class="service-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow hover:shadow-xl transition"
+          class="service-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all border border-transparent hover:border-pink-300"
         >
           <h3 class="text-xl font-bold dark:text-white">Home Cleaning</h3>
-          <p class="text-gray-600 dark:text-gray-400">
-            Professional cleaning service
+          <p class="text-gray-600 dark:text-gray-400 mt-2">
+            Professional cleaning service for your sweet home.
           </p>
-          <button
-            onclick="openModal('Home Cleaning')"
-            class="mt-3 bg-pink-500 text-white px-4 py-2 rounded-full"
-          >
-            Book
-          </button>
+          <div class="flex items-center gap-2 mt-5">
+            <a
+              href="/homeCleaning/cleaning.html"
+              class="flex-1 text-center bg-pink-500 text-white px-4 py-2 rounded-xl hover:bg-pink-600 transition font-medium"
+              >Details</a
+            >
+            <button
+              onclick="openModal('Home Cleaning')"
+              class="flex-1 border border-pink-500 text-pink-500 px-4 py-2 rounded-xl hover:bg-pink-50 transition font-medium"
+            >
+              Book
+            </button>
+          </div>
         </div>
 
         <div
-          class="service-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow hover:shadow-xl transition"
+          class="service-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all border border-transparent hover:border-pink-300"
         >
           <h3 class="text-xl font-bold dark:text-white">AC Servicing</h3>
-          <p class="text-gray-600 dark:text-gray-400">
-            Expert maintenance and gas refilling.
+          <p class="text-gray-600 dark:text-gray-400 mt-2">
+            Expert maintenance and gas refilling service.
           </p>
-          <button
-            onclick="openModal('AC Servicing')"
-            class="mt-3 bg-pink-500 text-white px-4 py-2 rounded-full"
-          >
-            Book
-          </button>
+          <div class="flex items-center gap-2 mt-5">
+            <a
+              href="ac-service.html"
+              class="flex-1 text-center bg-pink-500 text-white px-4 py-2 rounded-xl hover:bg-pink-600 transition font-medium"
+              >Details</a
+            >
+            <button
+              onclick="openModal('AC Servicing')"
+              class="flex-1 border border-pink-500 text-pink-500 px-4 py-2 rounded-xl hover:bg-pink-50 transition font-medium"
+            >
+              Book
+            </button>
+          </div>
         </div>
 
         <div
-          class="service-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow hover:shadow-xl transition"
+          class="service-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all border border-transparent hover:border-pink-300"
         >
           <h3 class="text-xl font-bold dark:text-white">Fridge Repair</h3>
-          <p class="text-gray-600 dark:text-gray-400">
-            Quick fix for all cooling issues.
+          <p class="text-gray-600 dark:text-gray-400 mt-2">
+            Quick fix for all types of cooling issues.
           </p>
-          <button
-            onclick="openModal('Fridge Repair')"
-            class="mt-3 bg-pink-500 text-white px-4 py-2 rounded-full"
-          >
-            Book
-          </button>
+          <div class="flex items-center gap-2 mt-5">
+            <a
+              href="fridge.html"
+              class="flex-1 text-center bg-pink-500 text-white px-4 py-2 rounded-xl hover:bg-pink-600 transition font-medium"
+              >Details</a
+            >
+            <button
+              onclick="openModal('Fridge Repair')"
+              class="flex-1 border border-pink-500 text-pink-500 px-4 py-2 rounded-xl hover:bg-pink-50 transition font-medium"
+            >
+              Book
+            </button>
+          </div>
         </div>
 
         <div
-          class="service-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow hover:shadow-xl transition"
+          class="service-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all border border-transparent hover:border-pink-300"
         >
           <h3 class="text-xl font-bold dark:text-white">Beauty Salon</h3>
-          <p class="text-gray-600 dark:text-gray-400">
-            Facial, haircut, and bridal makeup.
+          <p class="text-gray-600 dark:text-gray-400 mt-2">
+            Professional salon services including facial and makeup at home.
           </p>
-          <button
-            onclick="openModal('Beauty Salon')"
-            class="mt-3 bg-pink-500 text-white px-4 py-2 rounded-full"
-          >
-            Book
-          </button>
+          <div class="flex items-center gap-2 mt-5">
+            <a
+              href="beauty.html"
+              class="flex-1 text-center bg-pink-500 text-white px-4 py-2 rounded-xl hover:bg-pink-600 transition font-medium"
+              >Details</a
+            >
+            <button
+              onclick="openModal('Beauty Salon')"
+              class="flex-1 border border-pink-500 text-pink-500 px-4 py-2 rounded-xl hover:bg-pink-50 transition font-medium"
+            >
+              Book
+            </button>
+          </div>
         </div>
 
         <div
-          class="service-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow hover:shadow-xl transition"
+          class="service-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all border border-transparent hover:border-pink-300"
         >
           <h3 class="text-xl font-bold dark:text-white">House Shifting</h3>
-          <p class="text-gray-600 dark:text-gray-400">
-            Safe and stress-free relocation.
+          <p class="text-gray-600 dark:text-gray-400 mt-2">
+            Reliable and stress-free relocation service for your home.
           </p>
-          <button
-            onclick="openModal('House Shifting')"
-            class="mt-3 bg-pink-500 text-white px-4 py-2 rounded-full"
-          >
-            Book
-          </button>
+          <div class="flex items-center gap-2 mt-5">
+            <a
+              href="shifting.html"
+              class="flex-1 text-center bg-pink-500 text-white px-4 py-2 rounded-xl hover:bg-pink-600 transition font-medium"
+              >Details</a
+            >
+            <button
+              onclick="openModal('House Shifting')"
+              class="flex-1 border border-pink-500 text-pink-500 px-4 py-2 rounded-xl hover:bg-pink-50 transition font-medium"
+            >
+              Book
+            </button>
+          </div>
         </div>
 
         <div
-          class="service-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow hover:shadow-xl transition"
+          class="service-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all border border-transparent hover:border-pink-300"
         >
           <h3 class="text-xl font-bold dark:text-white">Pest Control</h3>
-          <p class="text-gray-600 dark:text-gray-400">
-            Effective solution for insects and rodents.
+          <p class="text-gray-600 dark:text-gray-400 mt-2">
+            Expert solutions to keep your home safe from insects and pests.
           </p>
-          <button
-            onclick="openModal('Pest Control')"
-            class="mt-3 bg-pink-500 text-white px-4 py-2 rounded-full"
-          >
-            Book
-          </button>
+          <div class="flex items-center gap-2 mt-5">
+            <a
+              href="pest-control.html"
+              class="flex-1 text-center bg-pink-500 text-white px-4 py-2 rounded-xl hover:bg-pink-600 transition font-medium"
+              >Details</a
+            >
+            <button
+              onclick="openModal('Pest Control')"
+              class="flex-1 border border-pink-500 text-pink-500 px-4 py-2 rounded-xl hover:bg-pink-50 transition font-medium"
+            >
+              Book
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="service-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all border border-transparent hover:border-pink-300"
+        >
+          <h3 class="text-xl font-bold dark:text-white">Plumbing</h3>
+          <p class="text-gray-600 dark:text-gray-400 mt-2">
+            Expert plumbing solutions for leaks, repairs, and installations.
+          </p>
+          <div class="flex items-center gap-2 mt-5">
+            <a
+              href="plumbing.html"
+              class="flex-1 text-center bg-pink-500 text-white px-4 py-2 rounded-xl hover:bg-pink-600 transition font-medium"
+              >Details</a
+            >
+            <button
+              onclick="openModal('Plumbing')"
+              class="flex-1 border border-pink-500 text-pink-500 px-4 py-2 rounded-xl hover:bg-pink-50 transition font-medium"
+            >
+              Book
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="service-card bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-md hover:shadow-2xl transition-all border border-transparent hover:border-pink-300"
+        >
+          <h3 class="text-xl font-bold dark:text-white">Electrical Work</h3>
+          <p class="text-gray-600 dark:text-gray-400 mt-2">
+            Safe and professional electrical repair and maintenance services.
+          </p>
+          <div class="flex items-center gap-2 mt-5">
+            <a
+              href="electrical.html"
+              class="flex-1 text-center bg-pink-500 text-white px-4 py-2 rounded-xl hover:bg-pink-600 transition font-medium"
+              >Details</a
+            >
+            <button
+              onclick="openModal('Electrical Work')"
+              class="flex-1 border border-pink-500 text-pink-500 px-4 py-2 rounded-xl hover:bg-pink-50 transition font-medium"
+            >
+              Book
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
-    <footer class="bg-pink-500 dark:bg-pink-700 text-white text-center p-4">
-      © 2026 Tanzim Ahmed Utsho Sheba Khojo
+    <div
+      id="modal"
+      class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] flex justify-center items-center p-4"
+    >
+      <div
+        class="bg-white dark:bg-slate-800 p-8 rounded-3xl w-full max-w-md shadow-2xl transform transition-all"
+      >
+        <h2 id="serviceName" class="text-2xl font-bold mb-2 text-pink-500"></h2>
+        <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm">
+          অনুগ্রহ করে নিচের তথ্যগুলো পূরণ করুন
+        </p>
+
+        <div class="space-y-4">
+          <input
+            type="text"
+            placeholder="আপনার নাম"
+            class="w-full px-4 py-3 rounded-xl border dark:border-slate-600 dark:bg-slate-700 outline-none focus:ring-2 focus:ring-pink-500 transition"
+          />
+          <input
+            type="text"
+            placeholder="ফোন নম্বর"
+            class="w-full px-4 py-3 rounded-xl border dark:border-slate-600 dark:bg-slate-700 outline-none focus:ring-2 focus:ring-pink-500 transition"
+          />
+          <button
+            class="bg-pink-500 text-white py-4 rounded-xl w-full font-bold shadow-lg hover:bg-pink-600 active:scale-95 transition"
+          >
+            কনফার্ম করুন
+          </button>
+        </div>
+
+        <button
+          onclick="closeModal()"
+          class="mt-4 w-full text-gray-400 hover:text-red-500 transition text-sm font-medium"
+        >
+          বন্ধ করুন
+        </button>
+      </div>
+    </div>
+
+    <footer class="bg-pink-500 dark:bg-pink-700 text-white text-center p-6">
+      <p class="font-medium">© 2026 Tanzim Ahmed Utsho | Sheba Khojo</p>
     </footer>
 
     <script src="home.js"></script>

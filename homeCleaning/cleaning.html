@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Cleaning - Sheba Khojo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-50 dark:bg-slate-900 transition-colors duration-300">
+    <nav
+      class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md sticky top-0 z-50 p-4 shadow-sm"
+    >
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <a href="index.html" class="text-pink-600 font-bold text-xl"
+          >← ফিরে যান</a
+        >
+        <button
+          onclick="toggleDark()"
+          id="theme-toggle"
+          class="p-2 bg-pink-100 dark:bg-slate-700 rounded-full"
+        >
+          🌙
+        </button>
+      </div>
+    </nav>
+
+    <div id="service-detail"></div>
+
+    <script src="/homeCleaning/cleaning.js"></script>
+  </body>
+</html>
