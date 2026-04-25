@@ -15,6 +15,10 @@
       html {
         scroll-behavior: smooth;
       }
+      /* Custom styling to hide default select arrow for cleaner look */
+      .location-select {
+        appearance: none;
+      }
     </style>
   </head>
 
@@ -64,9 +68,19 @@
           class="flex bg-white dark:bg-slate-700 rounded-xl overflow-hidden shadow-lg w-full max-w-[600px] mx-auto"
         >
           <div
-            class="hidden sm:flex px-4 items-center text-gray-600 dark:text-gray-300 border-r dark:border-slate-600"
+            class="hidden sm:flex items-center border-r dark:border-slate-600 bg-gray-50 dark:bg-slate-800/50 px-2"
           >
-            📍 Gulshan
+            <select
+              id="locationSelect"
+              onchange="saveLocation()"
+              class="bg-transparent px-2 py-3 outline-none text-gray-600 dark:text-gray-300 cursor-pointer font-medium text-sm"
+            >
+              <option value="Gulshan">📍 Gulshan</option>
+              <option value="Banani">📍 Banani</option>
+              <option value="Dhanmondi">📍 Dhanmondi</option>
+              <option value="Uttara">📍 Uttara</option>
+              <option value="Mirpur">📍 Mirpur</option>
+            </select>
           </div>
           <input
             id="searchInput"

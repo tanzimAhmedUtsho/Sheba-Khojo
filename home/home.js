@@ -31,6 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (themeBtn) themeBtn.innerHTML = "☀️";
   }
 
+  // লোকেশন চেক
+  const savedLoc = localStorage.getItem("userLocation");
+  if (savedLoc && document.getElementById("locationSelect")) {
+    document.getElementById("locationSelect").value = savedLoc;
+  }
+
   // লগইন চেক
   const isLoggedIn = localStorage.getItem("isLoggedIn");
   const loginBtnContainer = document.querySelector("nav div.space-x-3");
@@ -51,6 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+// লোকেশন সেভ করার ফাংশন
+function saveLocation() {
+  const loc = document.getElementById("locationSelect").value;
+  localStorage.setItem("userLocation", loc);
+}
 
 function logout() {
   localStorage.removeItem("isLoggedIn");
