@@ -191,6 +191,134 @@ const allServices = {
       "মেডিসিন হোম ডেলিভারি",
     ],
   },
+  fridge: {
+    title: "Expert Fridge & Refrigerator Repair",
+    rating: "4.8 (১৬০+ রিভিউ)",
+    price: "৳ ৬০০ থেকে শুরু",
+    image:
+      "https://images.unsplash.com/photo-1571175432270-48225e9e3c77?q=80&w=1000",
+    description:
+      "আপনার ফ্রিজের কুলিং সমস্যা বা যেকোনো যান্ত্রিক ত্রুটির দ্রুত সমাধান। আমরা অরিজিনাল থার্মোস্ট্যাট এবং গ্যাস ব্যবহার নিশ্চিত করি।",
+    features: [
+      {
+        icon: "fa-ice-cream",
+        title: "দ্রুত কুলিং",
+        desc: "কুলিং পারফরম্যান্স পুনরুদ্ধার।",
+      },
+      {
+        icon: "fa-bolt",
+        title: "বিদ্যুৎ সাশ্রয়",
+        desc: "অপ্রয়োজনীয় লোড কমানো।",
+      },
+      {
+        icon: "fa-shield-alt",
+        title: "সার্ভিস ওয়ারেন্টি",
+        desc: "পার্টস রিপ্লেসমেন্টে গ্যারান্টি।",
+      },
+    ],
+    includes: [
+      "গ্যাস চার্জিং",
+      "কম্প্রেসর রিপেয়ার",
+      "থার্মোস্ট্যাট চেঞ্জ",
+      "ডোর সিল ফিক্সিং",
+    ],
+  },
+  "pest control": {
+    title: "Eco-Friendly Pest Control",
+    rating: "4.7 (১১০+ রিভিউ)",
+    price: "৳ ১২০০ থেকে শুরু",
+    image:
+      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1000",
+    description:
+      "তেলাপোকা, ছারপোকা বা উইপোকা থেকে মুক্তি পান চিরতরে। আমরা ব্যবহার করি উন্নত মানের এবং পরিবেশবান্ধব নিরাপদ কেমিক্যাল।",
+    features: [
+      {
+        icon: "fa-bug",
+        title: "সম্পূর্ণ মুক্তি",
+        desc: "পোকামাকড় থেকে ১০০% সুরক্ষা।",
+      },
+      {
+        icon: "fa-leaf",
+        title: "নিরাপদ স্প্রে",
+        desc: "শিশু ও পোষা প্রাণীর জন্য নিরাপদ।",
+      },
+      {
+        icon: "fa-calendar-check",
+        title: "ফল-আপ সার্ভিস",
+        desc: "প্রয়োজনে পুনরায় সার্ভিস প্রদান।",
+      },
+    ],
+    includes: [
+      "বেড বাগ ট্রিটমেন্ট",
+      "ককরোচ কন্ট্রোল",
+      "অ্যান্টি-টারমাইট সলিউশন",
+      "মাছি ও মশা নিধন",
+    ],
+  },
+  plumbing: {
+    title: "Emergency Plumbing Solutions",
+    rating: "4.8 (১৪০+ রিভিউ)",
+    price: "৳ ৩০০ থেকে শুরু",
+    image:
+      "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?q=80&w=1000",
+    description:
+      "পানির লাইন লিক বা ট্যাপ নষ্ট? আমাদের এক্সপার্ট প্লাম্বাররা যেকোনো সেনিটারি সমস্যার সমাধান দিবে নিমিষেই।",
+    features: [
+      {
+        icon: "fa-faucet",
+        title: "তৎক্ষণাৎ সমাধান",
+        desc: "কল করার ৬০ মিনিটের মধ্যে টেকনিশিয়ান।",
+      },
+      {
+        icon: "fa-tint-slash",
+        title: "লিক ডিটেকশন",
+        desc: "অদৃশ্য পানির লিক খুঁজে বের করা।",
+      },
+      {
+        icon: "fa-wrench",
+        title: "আধুনিক টুলস",
+        desc: "নিখুঁত কাজের জন্য উন্নত যন্ত্রপাতি।",
+      },
+    ],
+    includes: [
+      "ট্যাপ ও বেসিন রিপেয়ার",
+      "কমোড ও ফ্লাশ ফিটিং",
+      "পাইপলাইন জ্যাম পরিষ্কার",
+      "পানির পাম্প সার্ভিসিং",
+    ],
+  },
+  electrical: {
+    title: "Safe Electrical Work",
+    rating: "4.9 (১৯০+ রিভিউ)",
+    price: "৳ ৩৫০ থেকে শুরু",
+    image:
+      "https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=1000",
+    description:
+      "বাড়ির ইলেকট্রিক ওয়্যারিং থেকে শুরু করে লাইট-ফ্যান ফিটিং - সব ধরনের ইলেক্ট্রিক্যাল কাজের নির্ভরযোগ্য সমাধান।",
+    features: [
+      {
+        icon: "fa-bolt",
+        title: "সুরক্ষিত ওয়্যারিং",
+        desc: "শর্ট সার্কিট ঝুঁকি থেকে মুক্তি।",
+      },
+      {
+        icon: "fa-lightbulb",
+        title: "ইনস্টলেশন",
+        desc: "ফ্যান, লাইট ও এসি কানেকশন।",
+      },
+      {
+        icon: "fa-user-shield",
+        title: "ভেরিফাইড ইলেক্ট্রিশিয়ান",
+        desc: "নিরাপদ ও দক্ষ কাজের নিশ্চয়তা।",
+      },
+    ],
+    includes: [
+      "সার্কিট ব্রেকার মেরামত",
+      "সুইচ ও সকেট চেঞ্জ",
+      "আইপিএস সার্ভিসিং",
+      "নতুন ওয়্যারিং চেকআপ",
+    ],
+  },
 };
 
 // বর্তমান সার্ভিসের ডাটা লোড করা
@@ -205,6 +333,10 @@ else if (serviceParam.includes("cleaning")) currentService = "cleaning";
 else if (serviceParam.includes("beauty")) currentService = "beauty";
 else if (serviceParam.includes("shifting")) currentService = "shifting";
 else if (serviceParam.includes("health")) currentService = "health";
+else if (serviceParam.includes("fridge")) currentService = "fridge";
+else if (serviceParam.includes("pest")) currentService = "pest control";
+else if (serviceParam.includes("plumbing")) currentService = "plumbing";
+else if (serviceParam.includes("electrical")) currentService = "electrical";
 
 const serviceData = allServices[currentService];
 
