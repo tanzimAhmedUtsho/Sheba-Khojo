@@ -56,6 +56,23 @@ function closeModal() {
   }
 }
 
+// ✅ ৩.৫ বুকিং কনফার্ম করা
+function confirmBooking() {
+  const name = document.getElementById("userName").value.trim();
+  const phone = document.getElementById("userPhone").value.trim();
+  const service = document.getElementById("serviceName").innerText;
+
+  if (name === "" || phone === "") {
+    alert("অনুগ্রহ করে আপনার নাম এবং ফোন নম্বর প্রদান করুন।");
+    return;
+  }
+
+  // এখানে সাধারণত ডাটাবেজে ডাটা পাঠানো হয়।
+  // আমরা সার্ভিসের নাম দিয়ে সাকসেস পেজে রিডাইরেক্ট করছি।
+  const url = `booking-success.html?service=${encodeURIComponent(service)}`;
+  window.location.href = url;
+}
+
 // মডালের বাইরে ক্লিক করলে বন্ধ হবে
 window.addEventListener("click", (e) => {
   const modal = document.getElementById("modal");

@@ -95,7 +95,8 @@ const renderPage = () => {
 
 // Functions
 const bookNow = () => {
-  alert("ধন্যবাদ! আমাদের প্রতিনিধি আপনার সাথে শীঘ্রই যোগাযোগ করবেন।");
+  const url = `../home/booking-success.html?service=${encodeURIComponent(serviceData.title)}`;
+  window.location.href = url;
 };
 
 function toggleDark() {
