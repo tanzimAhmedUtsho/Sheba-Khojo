@@ -113,7 +113,7 @@ function confirmBooking() {
 
   // এখানে সাধারণত ডাটাবেজে ডাটা পাঠানো হয়।
   // আমরা সার্ভিসের নাম দিয়ে সাকসেস পেজে রিডাইরেক্ট করছি।
-  const url = `booking-success.html?service=${encodeURIComponent(service)}`;
+  const url = `../booking button/booking-success.html?service=${encodeURIComponent(service)}`;
   window.location.href = url;
 }
 

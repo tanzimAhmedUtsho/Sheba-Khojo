@@ -95,7 +95,7 @@ const renderPage = () => {
 
 // Functions
 const bookNow = () => {
-  const url = `../home/booking-success.html?service=${encodeURIComponent(serviceData.title)}`;
+  const url = `../booking button/booking-success.html?service=${encodeURIComponent(serviceData.title)}`;
   window.location.href = url;
 };
 
