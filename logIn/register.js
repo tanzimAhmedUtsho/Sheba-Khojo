@@ -28,7 +28,7 @@ const renderRegisterPage = () => {
 
                 <div class="mt-8 text-center">
                     <p class="text-gray-500">ইতিমধ্যেই অ্যাকাউন্ট আছে? 
-                        <a href="../logIn/login.html" class="text-pink-600 font-bold hover:underline">লগইন করুন</a>
+                        <a href="./login.html" class="text-pink-600 font-bold hover:underline">লগইন করুন</a>
                     </p>
                 </div>
             </div>
@@ -50,11 +50,25 @@ const renderInputs = () => {
       placeholder: "তানজীম আহমেদ",
     },
     {
+      id: "phone",
+      type: "tel",
+      label: "ফোন নম্বর",
+      icon: "fa-phone",
+      placeholder: "01XXXXXXXXX",
+    },
+    {
       id: "email",
       type: "email",
       label: "ইমেইল",
       icon: "fa-envelope",
       placeholder: "example@mail.com",
+    },
+    {
+      id: "address",
+      type: "text",
+      label: "ঠিকানা",
+      icon: "fa-map-marker-alt",
+      placeholder: "আপনার পূর্ণ ঠিকানা",
     },
     {
       id: "password",

@@ -29,7 +29,7 @@ const renderLoginPage = () => {
 
                 <div class="mt-8 text-center">
                     <p class="text-gray-500">নতুন ইউজার? 
-                        <a href="../register/register.html" class="text-pink-600 font-bold hover:underline">অ্যাকাউন্ট খুলুন</a>
+                        <a href="./register.html" class="text-pink-600 font-bold hover:underline">অ্যাকাউন্ট খুলুন</a>
                     </p>
                 </div>
             </div>
